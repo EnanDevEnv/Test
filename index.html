@@ -62,7 +62,7 @@ body{
 .lens .d{width:5px;height:5px;background:var(--gold);border:0;box-shadow:0 0 12px 3px rgba(255,206,106,.6)}
 
 /* type */
-.tag{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.2em;color:var(--gold);
+.tag{font-family:"Lusail","Lusail+","LusailLocal","IBM Plex Sans Arabic",system-ui,sans-serif;font-size:10.5px;letter-spacing:0;color:var(--gold);
   font-weight:600;display:inline-block;text-transform:uppercase}
 h1{font-family:"Lusail","Lusail+","LusailLocal","Readex Pro",sans-serif;font-weight:600;font-size:clamp(2.8rem,9vw,5.8rem);
   line-height:1.08;letter-spacing:-.015em;margin:.16em 0}
@@ -76,7 +76,7 @@ p{max-width:68ch}
   color:var(--gold);margin-bottom:24px}
 .hero .lede{font-size:1.04rem;color:var(--mute);max-width:58ch}
 .meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}
-.meta a,.meta span{font-family:"IBM Plex Mono",monospace;font-size:11.5px;text-decoration:none;color:var(--ink);
+.meta a,.meta span{font-family:"Lusail","Lusail+","LusailLocal","IBM Plex Sans Arabic",system-ui,sans-serif;font-size:11.5px;text-decoration:none;color:var(--ink);
   background:var(--raise);border:1px solid var(--edge2);border-radius:100px;padding:9px 17px;
   transition:.3s;direction:ltr;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .meta a:hover{border-color:var(--gold);color:var(--gold)}
@@ -118,7 +118,7 @@ section p{color:rgba(242,235,227,.8);font-size:.99rem}
 .role.open{background:rgba(255,255,255,.075);border-color:var(--edge)}
 .role.open::before{background:var(--gold);border-color:var(--gold);box-shadow:0 0 0 5px rgba(255,206,106,.16)}
 .rtop{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:22px 24px;cursor:pointer}
-.rtop .yr{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--gold);direction:ltr;white-space:nowrap;
+.rtop .yr{font-family:"Lusail","Lusail+","LusailLocal","IBM Plex Sans Arabic",system-ui,sans-serif;font-size:11px;color:var(--gold);direction:ltr;white-space:nowrap;
   border:1px solid var(--edge);border-radius:100px;padding:5px 12px;background:rgba(255,206,106,.08)}
 .rtop .org{display:block;font-family:"Lusail","Lusail+","LusailLocal","IBM Plex Sans Arabic";font-weight:300;font-size:.88rem;
   color:var(--gold);margin-top:3px}
@@ -178,14 +178,14 @@ ul.tick li:hover::before{opacity:1;box-shadow:0 0 10px var(--rose)}
 .sk:hover{border-color:var(--edge);background:rgba(255,255,255,.08);transform:translateX(-4px)}
 .sk.hide{display:none}
 .sk .nm{font-size:1.02rem;color:rgba(253,247,240,.94)}
-.sk .lv{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--gold);letter-spacing:.06em;
+.sk .lv{font-family:"Lusail","Lusail+","LusailLocal","IBM Plex Sans Arabic",system-ui,sans-serif;font-size:10.5px;color:var(--gold);letter-spacing:0;
   text-align:left;white-space:nowrap}
 .meter{grid-column:1/3;height:5px;border-radius:100px;background:rgba(255,255,255,.1);overflow:hidden}
 .meter i{display:block;height:100%;width:0;border-radius:100px;
   background:linear-gradient(90deg,var(--rose),var(--gold));
   transition:width 1.1s cubic-bezier(.16,1,.3,1)}
 .sk:hover .meter i{box-shadow:0 0 14px rgba(255,206,106,.6)}
-.sk .cat{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:var(--mute);letter-spacing:.1em;
+.sk .cat{font-family:"Lusail","Lusail+","LusailLocal","IBM Plex Sans Arabic",system-ui,sans-serif;font-size:9.5px;color:var(--mute);letter-spacing:0;
   grid-column:1/3;margin-top:-2px;opacity:.7}
 
 /* boxes */
@@ -218,6 +218,13 @@ a:focus-visible,.rtop:focus-visible,.tab:focus-visible,.shot:focus-visible{outli
   .rinner{padding:0 18px 22px}
 }
 @media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}.rise{opacity:1;transform:none}}
+
+/* اللاتيني والأرقام فقط يبقى بخط أحادي */
+.ltr,.yr,.meta a[href^="mailto"],.meta a[href^="tel"]{
+  font-family:"IBM Plex Mono",monospace;letter-spacing:.02em}
+/* الوسوم الذهبية: لوسيل، حروف موصولة، بوزن أوضح */
+.tag{font-family:"Lusail","Lusail+","LusailLocal","IBM Plex Sans Arabic",system-ui,sans-serif;font-weight:600;letter-spacing:0;
+  text-transform:none;font-size:.86rem;line-height:1.9}
 </style>
 
 </head>
@@ -235,7 +242,7 @@ a:focus-visible,.rtop:focus-visible,.tab:focus-visible,.shot:focus-visible{outli
 <div class="wrap">
 
 <header class="hero">
-  <span class="tag">الدوحة، قطر · متاحة للفرص المؤسسية</span>
+  <span class="tag">الدوحة، قطر</span>
   <h1>سارة أحمد<br>حسين محمد</h1>
   <p class="sub">أخصائية تخطيط استراتيجي وجودة وإدارة أداء &nbsp;·&nbsp; مهندسة مدنية</p>
   <p class="lede">أحوّل بيانات الإدارات والملاحظات التشغيلية إلى تقارير وتوصيات تدعم اتخاذ القرار — بخلفية هندسية تقرأ الأرقام كما تقرأ المخططات.</p>
